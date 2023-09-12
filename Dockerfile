@@ -12,6 +12,9 @@ COPY \
   src \
   ./
 
+RUN ls
+RUN pwd
+
 RUN npm install
 
 RUN npm run build
