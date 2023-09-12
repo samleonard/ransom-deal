@@ -16,7 +16,7 @@ RUN npm install
 
 RUN npm run build
 
-FROM nginx:1.17.7-alpine
+FROM nginx:1.25.2
 COPY --from=build /app/build /usr/share/nginx/html
 
 EXPOSE 80
