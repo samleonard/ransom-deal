@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:952283372302:task-definition/ransom-deal:2",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:952283372302:task-definition/ransom-deal:3",
   "containerDefinitions": [
     {
       "name": "ransom-deal",
-      "image": "952283372302.dkr.ecr.us-west-2.amazonaws.com/ransom-deal:latest",
+      "image": "952283372302.dkr.ecr.us-west-2.amazonaws.com/ransom-deal:137bb54b2603ea0663b2b36f255f30ba1cae3916",
       "cpu": 0,
       "portMappings": [
         {
@@ -16,10 +16,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -27,8 +25,7 @@
           "awslogs-group": "/ecs/",
           "awslogs-region": "us-west-2",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
+        }
       }
     }
   ],
@@ -36,7 +33,7 @@
   "taskRoleArn": "arn:aws:iam::952283372302:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::952283372302:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 2,
+  "revision": 3,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -77,7 +74,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2023-09-13T20:04:37.905Z",
-  "registeredBy": "arn:aws:iam::952283372302:user/sam",
+  "registeredAt": "2023-09-13T20:10:22.780Z",
+  "registeredBy": "arn:aws:iam::952283372302:user/ransom-deal",
   "tags": []
 }
