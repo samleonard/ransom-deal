@@ -17,3 +17,5 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 ENTRYPOINT ["nginx"]
 CMD ["-g", "daemon off;"]
+
+HEALTHCHECK CMD curl http://localhost/ || exit 1
