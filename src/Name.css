@@ -1,0 +1,13 @@
+.letter {
+  display: inline-block;
+  min-width: 5px;
+}
+
+.name-wrapper { 
+  position: relative;
+  display: inline-block;
+}
+
+.phantom-name-wrapper {
+  opacity: 0;
+}
