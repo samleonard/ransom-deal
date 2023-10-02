@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import anime from "animejs";
 import "./Name.css";
-
-const [startName, endName] = padStrings("armed loans", "sam leonard");
-const startLetters = startName.split("");
-const endLetters = endName.split("");
 
 function padStrings(...strings: string[]) {
   const maxLength = Math.max(...strings.map((s) => s.length));
   return strings.map((s) => s.padEnd(maxLength));
 }
+
+const [sam, startName, ...others] = padStrings(
+  "sam leonard",
+  "armed loans",
+  "dream salon",
+  "a damn loser",
+  "more sandal",
+  "ransom deal",
+  "named solar",
+  "almonds era",
+  "nomad laser",
+  "alarmed son",
+  "oral amends",
+  "lone dramas",
+  "sand morale",
+  "moaner lads",
+  "seaman lord"
+);
+const names = [startName, sam];
+for (const other of others) {
+  names.push(other, sam);
+}
+
+const letters = startName.split("");
 
 function getPermutation(startString: string, endString: string) {
   const positions: Record<string, number> = {};
@@ -35,32 +55,36 @@ function getXPosition(selector: string) {
 function getXDistance(startIndex: number, endIndex: number) {
   const startX = getXPosition(`#letter-${startIndex}`);
   const endX = getXPosition(`#phantom-letter-${endIndex}`);
-  console.log({ startX, endX, diff: endX - startX });
   return endX - startX;
 }
 
 function Name() {
+  const [nameIndex, setNameIndex] = useState(1);
+  const endName = names[nameIndex];
+  const endLetters = endName.split("");
+
   function handleClick() {
     const permutation = getPermutation(startName, endName);
-    startLetters.forEach((_, i) => {
+    letters.forEach((_, i) => {
       anime({
         targets: `#letter-${i}`,
-        translateX: getXDistance(i, permutation[i]),
+        translateX: `+=${getXDistance(i, permutation[i])}`,
         easing: "easeInOutCubic",
       });
     });
+
+    setNameIndex((nameIndex + 1) % names.length);
   }
 
   return (
     <>
-      <span className="name-wrapper" onClick={handleClick}>
-        {startLetters.map((letter, i) => (
+      <span className="name-wrapper" onMouseEnter={handleClick}>
+        {letters.map((letter, i) => (
           <span id={`letter-${i}`} key={i} className="letter">
             {letter}
           </span>
         ))}
       </span>
-      <br />
       <span className="name-wrapper phantom-name-wrapper">
         {endLetters.map((letter, i) => (
           <span id={`phantom-letter-${i}`} key={i} className="letter">
