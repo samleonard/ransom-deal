@@ -16,7 +16,7 @@ jobs:
           node-version: 20
       - name: Install Node.js dependencies
         run: npm ci
-      - name: Run ESLint
+      - name: Run ESLint and Prettier
         run: npm run lint
       - name: Check we can compile
         run: npx tsc
