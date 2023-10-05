@@ -41,9 +41,6 @@ function About() {
         Linting and testing are also run by GitHub Actions on all PRs.
       </Typography>
       <Typography sx={{ mt: 0.5 }}>
-        Linting and testing are also run by GitHub Actions on all PRs.
-      </Typography>
-      <Typography sx={{ mt: 0.5 }}>
         The website itself is hosted on Fargate spot-instances behind an ELB,
         and the domain is hosted on Route 53.
       </Typography>
