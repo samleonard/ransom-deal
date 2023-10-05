@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import anime from "animejs";
-import "./Name.css";
+import { Box, Typography } from "@mui/joy";
 
 function padStrings(...strings: string[]) {
   const maxLength = Math.max(...strings.map((s) => s.length));
@@ -58,6 +58,10 @@ function getXDistance(startIndex: number, endIndex: number) {
   return endX - startX;
 }
 
+function escapeSpace(letter: string) {
+  return letter === " " ? "\u00A0" : letter;
+}
+
 function Name() {
   const [nameIndex, setNameIndex] = useState(1);
   const endName = names[nameIndex];
@@ -78,20 +82,45 @@ function Name() {
 
   return (
     <>
-      <span className="name-wrapper" onMouseEnter={handleClick}>
+      <Box
+        sx={{
+          position: "absolute",
+          display: "inline-block",
+          cursor: "pointer",
+        }}
+        onClick={handleClick}
+      >
         {letters.map((letter, i) => (
-          <span id={`letter-${i}`} key={i} className="letter">
-            {letter}
-          </span>
+          <Typography
+            id={`letter-${i}`}
+            key={i}
+            sx={{
+              display: "inline-block",
+            }}
+          >
+            {escapeSpace(letter)}
+          </Typography>
         ))}
-      </span>
-      <span className="name-wrapper phantom-name-wrapper">
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          display: "inline-block",
+          visibility: "hidden",
+        }}
+      >
         {endLetters.map((letter, i) => (
-          <span id={`phantom-letter-${i}`} key={i} className="letter">
-            {letter}
-          </span>
+          <Typography
+            id={`phantom-letter-${i}`}
+            key={i}
+            sx={{
+              display: "inline-block",
+            }}
+          >
+            {escapeSpace(letter)}
+          </Typography>
         ))}
-      </span>
+      </Box>
     </>
   );
 }

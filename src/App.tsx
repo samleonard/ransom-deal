@@ -1,14 +1,28 @@
 import React from "react";
-import "./App.css";
-import Name from "./Name";
+import { CssBaseline, CssVarsProvider } from "@mui/joy";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./pages/Layout";
+import About from "./pages/About";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "about/",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Name />
-      </header>
-    </div>
+    <CssVarsProvider defaultColorScheme="dark">
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </CssVarsProvider>
   );
 }
 
