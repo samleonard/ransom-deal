@@ -9,7 +9,7 @@ env:
   ECR_REPOSITORY: ransom-deal
   ECS_SERVICE: ransom-deal-fargate
   ECS_CLUSTER: ransom-deal
-  ECS_TASK_DEFINITION: taskDefinition.json
+  ECS_TASK_DEFINITION: infra/taskDefinition.json
   CONTAINER_NAME: ransom-deal
 
 permissions:

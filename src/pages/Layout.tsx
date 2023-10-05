@@ -1,7 +1,7 @@
 import { Box, Link } from "@mui/joy";
-import Header from "../components/Header";
-import Name from "../Name";
 import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import Name from "../components/Name";
 import Main from "../components/Main";
 
 function Layout() {
