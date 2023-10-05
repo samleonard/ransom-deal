@@ -12,8 +12,9 @@ function About() {
         Hi, this is a website. I don&apos;t really need a website for much, but,
         who knows, maybe I will some day. I gravitate more to backend
         programming than frontend, and I&apos;m certainly not a designer, so
-        this serves as more of a starting point/example of some good development
-        practices and infrastructure for a new code base. See the source code{' '}
+        this is meant to serve mostly as a starting point/example of some good
+        development practices and infrastructure for a new code base. See the
+        source code{' '}
         <Link href="https://github.com/samleonard/ransom-deal">here</Link>.
       </Typography>
       <Typography level="h2" sx={{ mt: 2 }}>
@@ -54,7 +55,11 @@ function About() {
           <li>Add a logging tool like Datadog</li>
           <li>
             Migrate away from create-react-app, since it seems as though it will
-            not be maintained going forward. The React suggest Next.js.
+            not be maintained going forward. The React docs suggest Next.js.
+          </li>
+          <li>
+            If this were a real project, use better git practices (commit
+            comments, PRs for all changes, etc.).
           </li>
         </ul>
       </Typography>
