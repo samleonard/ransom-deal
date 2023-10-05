@@ -13,8 +13,8 @@ function About() {
         who knows, maybe I will some day. I gravitate more to backend
         programming than frontend, and I&apos;m certainly not a designer, so
         this is meant to serve mostly as a starting point/example of some good
-        development practices and infrastructure for a new code base. See the
-        source code{' '}
+        development practices and infrastructure for a new code base for now.
+        See the source code{' '}
         <Link href="https://github.com/samleonard/ransom-deal">here</Link>.
       </Typography>
       <Typography level="h2" sx={{ mt: 2 }}>
@@ -24,10 +24,9 @@ function About() {
         Front End
       </Typography>
       <Typography>
-        I initialized this website with create-react-app to initialize the
-        website. To the extent this website is &quot;designed&quot;, I used Joy
-        UI as a design system. I used React Router for routing and Anime.js for
-        animations.
+        I initialized this website with create-react-app. To the extent this
+        website is &quot;designed&quot;, I used Joy UI as a design system. I
+        used React Router for routing and Anime.js for animations.
       </Typography>
       <Typography level="h3" sx={{ mt: 1 }}>
         Infrastructure
