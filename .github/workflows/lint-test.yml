@@ -1,11 +1,11 @@
-name: Lint
+name: Lint and Test
 on:
   pull_request:
     types: ['opened', 'reopened', 'synchronize']
 
 jobs:
   run-linters:
-    name: Lint
+    name: Lint and Test
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
@@ -18,5 +18,5 @@ jobs:
         run: npm ci
       - name: Run ESLint and Prettier
         run: npm run lint
-      - name: Check we can compile
-        run: npx tsc
+      - name: Run unit tests
+        run: npm test

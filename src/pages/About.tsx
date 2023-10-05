@@ -24,8 +24,11 @@ function About() {
       <Typography level="h3">Infrastructure</Typography>
       <Typography>
         The source code is hosted on GitHub, and the service is hosted on AWS.
-        Deployments are handled by a GitHub CI/CD; each push to main builds a
+        Deployments are handled by a GitHub Actions; each push to main builds a
         new docker image, uploads it to ECR, then triggers an ECS deploy.
+      </Typography>
+      <Typography>
+        Linting and testing are also run by GitHub Actions on all PRs.
       </Typography>
       <Typography>
         The website itself is hosted on Fargate spot-instances behind an ELB,
