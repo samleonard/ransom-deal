@@ -1,21 +1,21 @@
-import { Box, Link } from "@mui/joy";
-import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
-import Name from "../components/Name";
-import Main from "../components/Main";
+import { Box, Link } from '@mui/joy';
+import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
+import Name from '../components/Name';
+import Main from '../components/Main';
 
 function Layout() {
   return (
     <>
       <Header>
-        <Box sx={[{ display: "flex", flexDirection: "row", gap: 1 }]}>
+        <Box sx={[{ display: 'flex', flexDirection: 'row', gap: 1 }]}>
           <Link href="/">home</Link>
           <Link href="/about">about</Link>
         </Box>
         <Box>
           <Name />
         </Box>
-        <Box sx={[{ display: "flex", flexDirection: "row", gap: 1 }]}>
+        <Box sx={[{ display: 'flex', flexDirection: 'row', gap: 1 }]}>
           <Link href="https://www.linkedin.com/in/sammleonard/">linkedin</Link>
           <Link href="https://github.com/samleonard">github</Link>
         </Box>
