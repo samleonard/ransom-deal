@@ -6,6 +6,8 @@ A website.
 
 Start the service with or without docker using `docker-compose up --build` or `npm start` respectively.
 
+Run linters with `npm run lint`
+
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), which provides the following scripts:
