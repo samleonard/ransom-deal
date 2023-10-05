@@ -1,3 +1,4 @@
+import React from 'react';
 import { Sheet, Typography } from '@mui/joy';
 
 function About() {
@@ -9,16 +10,16 @@ function About() {
     >
       <Typography>Hi, this is a website.</Typography>
       <Typography>
-        I don't really need a website for much, but, who knows, maybe I will
-        some day.
+        I don&apos;t really need a website for much, but, who knows, maybe I
+        will some day.
       </Typography>
       <Typography level="h2">Implementation</Typography>
       <Typography level="h3">Front End</Typography>
       <Typography>
         I initialized this website with create-react-app to initialize the
-        website. To the extent this website is "designed", I used Joy UI as a
-        design system (to the extent this website is "designed"). I used React
-        Router for routing and Anime.js for animations.
+        website. To the extent this website is &quot;designed&quot;, I used Joy
+        UI as a design system. I used React Router for routing and Anime.js for
+        animations.
       </Typography>
       <Typography level="h3">Infrastructure</Typography>
       <Typography>
