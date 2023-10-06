@@ -14,8 +14,10 @@ function About() {
         programming than frontend, and I&apos;m certainly not a designer, so
         this is meant to serve mostly as a starting point/example of some good
         development practices and infrastructure for a new code base for now.
-        See the source code{' '}
-        <Link href="https://github.com/samleonard/ransom-deal">here</Link>.
+        See the{' '}
+        <Link href="https://github.com/samleonard/ransom-deal">
+          source code
+        </Link>
       </Typography>
       <Typography level="h2" sx={{ mt: 2 }}>
         Implementation Details
@@ -46,22 +48,32 @@ function About() {
       <Typography level="h3" sx={{ mt: 1 }}>
         Potential Improvements
       </Typography>
+      <Typography>
+        Things I might add for a more serious project but haven&quot;t here,
+        either due to unreasonable cost/effort for a personal project, or just
+        because I haven&quot;t gotten to it yet.
+      </Typography>
       <Typography sx={{ mt: 1 }}>
         <ul style={{ marginTop: 0 }}>
-          <li>Add a logging tool like Datadog</li>
+          <li>More code comments</li>
           <li>
             Migrate away from create-react-app, since it seems as though it will
             not be maintained going forward. The React docs suggest Next.js.
           </li>
           <li>
-            If this were a real project, use better git practices (commit
-            comments, PRs for all changes, etc.).
+            Better git practices (commit comments, PRs for all changes, etc.)
           </li>
-          <li>Improve latency with a service like CloudFront.</li>
+          <li>Use service like CloudFront for static file serving</li>
           <li>
-            Move infra settings into version control with something like
-            Terraform.
+            Move infra settings into version control with a tool like Terraform
           </li>
+          <li>
+            Deploy action should run tests again after building before actually
+            deploying
+          </li>
+          <li>Add a logging tool like Datadog</li>
+          <li>Monitoring with PagerDuty</li>
+          <li>Smoke tests and automated rollback of deploys</li>
         </ul>
       </Typography>
     </Sheet>

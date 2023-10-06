@@ -22,6 +22,7 @@ const [sam, startName, ...others] = padStrings(
   'lone dramas',
   'sand morale',
   'moaner lads',
+  'mold arenas',
   'seaman lord',
 );
 const names = [startName, sam];
