@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '@fontsource/inter';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './monitoring/reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
