@@ -57,6 +57,11 @@ function About() {
             If this were a real project, use better git practices (commit
             comments, PRs for all changes, etc.).
           </li>
+          <li>Improve latency with a service like CloudFront.</li>
+          <li>
+            Move infra settings into version control with something like
+            Terraform.
+          </li>
         </ul>
       </Typography>
     </Sheet>
